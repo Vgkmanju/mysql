@@ -1,0 +1,71 @@
+create table Test(id integer, title varchar(100));
+insert into Test(id, title) values(1, "Hello");
+select * from Test;
+-- Your code here!
+create database manju;
+select database();
+use manju;
+create table skcet(branch varchar(20),address varchar(20),phone_number numeric);
+show tables;
+show databases;
+show columns from skcet;
+show fields from skcet;
+desc skcet address;
+select * from skcet;
+insert into skcet values ('IT','IT BLOCK','9876543210');
+insert into skcet values('cse','cse block',1233456789);
+select * from skcet;
+explain skcet;
+drop table skcet;
+create table skcet1(branch varchar(20),address varchar(20),phone_number numeric);
+insert into skcet1 values ('IT','IT BLOCK','9876543210');
+insert into skcet1 values('cse','cse block',1233456789);
+desc skcet1;
+truncate table skcet1;
+desc skcet1;
+select * from skcet1;
+alter table skcet1 drop phone_number;
+alter table skcet1 add (phone_number numeric);
+alter table skcet1 modify phone_number varchar(11);
+alter table skcet1 modify phone_number numeric;
+create table employee(name varchar(20), id varchar(20) not null primary key);
+insert into employee values('manju','064');
+insert into employee values('monisha','112');
+insert into employee values('rose','113');
+insert into employee values('monisha','110');
+select count(*) from employee;
+select distinct name from employee;
+select min(id) from employee;
+select max(id) from employee;
+update employee set name='roshini' where name='rose';
+select * from employee;
+delete from employee where id='110';
+select * from employee;
+CREATE TABLE myfriends
+(
+    last_name   VARCHAR(15) NOT NULL,
+    first_name  VARCHAR(15) NOT NULL,
+    suffix      VARCHAR(5) NULL,
+    sex         VARCHAR(1) NULL,
+    city        VARCHAR(20) NOT NULL,
+    state       VARCHAR(2) NOT NULL,
+    age     int
+);
+INSERT INTO myfriends VALUES('mouse','mickey','Mr',NULL,'Chennai','TN',10);
+INSERT INTO myfriends VALUES('Storm','Wonder',NULL,'F','Hollywood','LA',10);
+SELECT * from myfriends;
+INSERT INTO myfriends VALUES('motu','super','Mr','M','Mumbai','MH',20);
+INSERT INTO myfriends VALUES('Bali','Bahu','Amer','M','MahilMadi','MM',25);
+SELECT * from myfriends where age <= '20' and first_name='mickey';
+SELECT * from myfriends where age <= '20' or first_name='mickey';
+SELECT * from myfriends where first_name like '%a%';
+SELECT * from myfriends where first_name not like '%a%';
+SELECT * from myfriends where sex in ('M','F');
+truncate table employee;
+select * from employee;
+insert into employee values('manju','064');
+select * from employee;
+SELECT CONCAT(first_name, '',last_name) as full_name from myfriends;
+SELECT length(first_name) as full_name from myfriends;
+SELECT length(concat(first_name,last_name)) as full_name from myfriends;
+SELECT COUNT(SEX) FROM myfriends GROUP BY SEX;
