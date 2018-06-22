@@ -1,0 +1,20 @@
+create table Test(id integer, title varchar(100));
+insert into Test(id, title) values(1, "Hello");
+select * from Test;
+-- Your code here!
+show databases;
+create database manju;
+show databases;
+use manju;
+CREATE TABLE Persons (
+    ID int NOT NULL AUTO_INCREMENT,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (ID)
+);
+desc Persons;
+insert into Persons(LastName,FirstName,Age) values('Venkatachalam','Manju',21);
+insert into Persons(LastName,FirstName,Age) values('Ramya','Ram',22);
+select * from Persons;
+alter table Persons auto_increment=111;
