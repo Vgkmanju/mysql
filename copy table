@@ -1,0 +1,14 @@
+create table student(id int not null auto_increment,dept varchar(10) not null,age int not null,address varchar(20) not null,cgpa int not null,primary key(id));
+alter table student auto_increment=100;
+insert into student (dept,age,address,cgpa) values('IT',21,'CBE',9);
+insert into student (dept,age,address,cgpa) values('IT',21,'CBE',8);
+insert into student (dept,age,address,cgpa) values('CSE',21,'NKL',9);
+insert into student (dept,age,address,cgpa) values('ECE',21,'PKD',10);
+insert into student (dept,age,address,cgpa) values('EEE',21,'SALEM',7);
+select * from student;
+create table stu like student;
+insert stu select * from student;
+select * from stu;
+create view stud as select * from student;
+select * from stud;
+desc stud;
